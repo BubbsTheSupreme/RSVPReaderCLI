@@ -1,7 +1,7 @@
 using System;
 
 
-namespace RSVPReader.Arguments
+namespace RSVPReader
 {
 	class Arguments
 	{
@@ -20,7 +20,7 @@ namespace RSVPReader.Arguments
 				case 2:
 					wpm = Convert.ToDouble(args[0]);
 					text = args[1];
-					if (text == "-f")
+					if (text == "--file")
 					{
 						Console.WriteLine("No file name was provided..");
 					} else 
@@ -31,7 +31,7 @@ namespace RSVPReader.Arguments
 				case 3:
 					wpm = Convert.ToDouble(args[0]);
 					text = args[2];
-					if (args[1] == "-f")
+					if (args[1] == "--file")
 					{
 						Rsvp.ReadFromFile(wpm, text);
 					} else 
